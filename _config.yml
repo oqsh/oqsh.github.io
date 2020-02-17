@@ -98,6 +98,4 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: git@github.com:oqsh/oqsh.github.io.git
-  branch: master
+  type: ''
