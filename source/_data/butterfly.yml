@@ -53,7 +53,7 @@ copy:
 # ---------------
 social:
   fa fa-github: https://github.com/oqsh
-  fa fa-envelope: 1021227218@qq.com
+  fa fa-envelope: mailto:1021227218@qq.com
   fa fa-rss: /atom.xml
 
 ####    search    ####
