@@ -3,6 +3,7 @@ title: 在Hexo搭建的博客中舒服地使用markdown
 date: 2020-02-18 22:18:26
 tags: 
 - markdown
+- Hexo
 categories: 博客搭建
 keywords:
 description:

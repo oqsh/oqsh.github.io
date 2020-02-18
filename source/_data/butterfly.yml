@@ -107,7 +107,18 @@ index_img: /img/top_img/index.png
 default_top_img: /img/top_img/index.png
 
 # the default cover of the post
-default_cover: https://cdn.jsdelivr.net/gh/jerryc127/butterfly_cdn@2.1.0/top_img/default.png
+default_cover: 
+  - /img/top_img/default1.jpg
+  - /img/top_img/default2.jpg
+  - /img/top_img/default3.jpg
+  - /img/top_img/default4.jpg
+  - /img/top_img/default5.jpg
+  - /img/top_img/default6.jpg
+  - /img/top_img/default7.jpg
+  - /img/top_img/default8.jpg
+  - /img/top_img/default9.jpg
+  - /img/top_img/default10.jpg
+  - /img/top_img/default11.jpg
 
 # the banner image of archive page
 archive_img: /img/top_img/archive.jpg
