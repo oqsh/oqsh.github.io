@@ -288,12 +288,13 @@ Flink:
 # 打賞按鈕
 reward:
   enable: true
+  comment: 给文章注入灵魂
   QR_code:
     - itemlist:
-        img: /img/wechat.jpg
+        img: /img/wechat.png
         text: 微信
     - itemlist:
-        img: /img/alipay.jpg
+        img: /img/alipay.png
         text: 支付寶
 
 # 推薦文章
