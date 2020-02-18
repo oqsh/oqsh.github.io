@@ -16,6 +16,12 @@ hide:
 
 
 
+### hexo博客Front-matter模板配置
+
+https://zhangjiejun.com/posts/config_Front-matter_in_hexo/
+
+
+
 ### 关于Butterfly图片的路径：
 
 在buttergly中的`/img`对应的路径都是`/themes/Butterfly/source/img`
