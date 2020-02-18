@@ -110,3 +110,9 @@ markdown_it_plus:
       enable: true
       options:
         strict: false
+
+# Algolia Search API Key
+algolia:
+  applicationID: 'JMS6D16ZDQ'
+  apiKey: '6a04d740b5866dec91ed161e1c60efda'
+  indexName: 'myBlog'
