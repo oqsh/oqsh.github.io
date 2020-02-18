@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>在Hexo搭建的博客中舒服地使用markdown</title>
+      <link href="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/"/>
+      <url>/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h1 id="工作前提"><a class="markdownIt-Anchor" href="#工作前提"></a> 工作前提</h1><ol><li>成功使用Hexo搭建自己的个人博客</li><li>电脑已安装Typora的markdown编辑器</li></ol><p>【PS：此处只介绍在mac OS下是如何操作的，不过windows下应该也是类似的操作】</p><h1 id="技巧一快速往markdown中插入图片"><a class="markdownIt-Anchor" href="#技巧一快速往markdown中插入图片"></a> 技巧一：快速往markdown中插入图片</h1><h2 id="最终效果"><a class="markdownIt-Anchor" href="#最终效果"></a> 最终效果</h2><ul><li>可以直接在本地直接在Typora编辑器内直接复制粘贴图片</li><li>在编辑器内写博客时能即时看到图片</li><li>配置到自己的博客时也不用再手动改代码或者移动图片</li></ul><h2 id="1-修改typora中插入图片的相关设置"><a class="markdownIt-Anchor" href="#1-修改typora中插入图片的相关设置"></a> 1. 修改Typora中插入图片的相关设置</h2><ul><li>首先打开全局图像设置：</li></ul><a href="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/image-20200218222230133.png" data-fancybox="group" data-caption="image-20200218222230133" class="fancybox"><img alt="image-20200218222230133" style="zoom:50%;" title="image-20200218222230133" data-src="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/image-20200218222230133.png" class="lazyload"></a><ul><li>然后按图中红框标记的设置进行配置：</li></ul><a href="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/image-20200218222510874.png" data-fancybox="group" data-caption="image-20200218222510874" class="fancybox"><img alt="image-20200218222510874" style="zoom:50%;" title="image-20200218222510874" data-src="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/image-20200218222510874.png" class="lazyload"></a><h2 id="2-安装hexo-asset-image插件"><a class="markdownIt-Anchor" href="#2-安装hexo-asset-image插件"></a> 2. 安装hexo-asset-image插件</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></tbody></table></figure></div><p>【PS：命令行末尾添加<code>--registry=https://registry.npm.taobao.org</code>是为了让国内的童鞋安装能快一点。如果你已经配置好淘宝的<code>cnpm</code>，直接用<code>cnpm</code>即可】</p><h2 id="3-修改项目根目录下的_configyml文件"><a class="markdownIt-Anchor" href="#3-修改项目根目录下的_configyml文件"></a> 3. 修改项目根目录下的_config.yml文件</h2><p>将其中的<code>post_asset_folder</code>的值设置为true，如果文件中没有<code>post_asset_folder</code>就自己添加下面这句话就好：</p><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">Code</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">post_asset_folder: true</span><br></pre></td></tr></tbody></table></figure></div><p>设置为true的作用是：当你在终端中执行<code>hexo new xxx_blog</code>时，</p><ul><li>不仅会在<code>/source/_posts/</code>文件夹下生成<code>xxx_blog.md</code></li><li>还会在<code>/source/_posts/</code>文件夹下生成一个名为<code>xxx_blog</code>的文件夹</li></ul><h1 id="技巧二添加文章时自动打开markdown编辑器"><a class="markdownIt-Anchor" href="#技巧二添加文章时自动打开markdown编辑器"></a> 技巧二：添加文章时自动打开markdown编辑器</h1><blockquote><p>主要参考此文章：<a href="https://notes.doublemine.me/2015-06-29-Hexo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E6%97%B6%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E7%BC%96%E8%BE%91%E5%99%A8.html" target="_blank" rel="noopener">添加文章时自动打开编辑器</a>，下面示范在mac OS下的操作</p></blockquote><h2 id="1-在项目根目录下的scripts文件夹中创建一个xxxjs的文件"><a class="markdownIt-Anchor" href="#1-在项目根目录下的scripts文件夹中创建一个xxxjs的文件"></a> 1. 在项目根目录下的<code>scripts</code>文件夹中创建一个xxx.js的文件：</h2><ul><li>如果没有<code>scripts</code>文件夹，则自己新建一个</li><li>新建的xxx.js文件，名字可以任意取</li></ul><h2 id="2-xxxjs文件的内容"><a class="markdownIt-Anchor" href="#2-xxxjs文件的内容"></a> 2. xxx.js文件的内容：</h2><div class="code-area-wrap"><div class="highlight-tools"><i class="fa fa-angle-down code-expand" aria-hidden="true"></i><div class="code_lang">javascript</div><div class="copy-notice"></div><i class="fa fa-clipboard" aria-hidden="true"></i></div><figure class="highlight javascript"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> exec = <span class="built_in">require</span>(<span class="string">'child_process'</span>).exec;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Hexo 2.x 用户复制这段</span></span><br><span class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">path</span>)</span>{</span><br><span class="line">    exec(<span class="string">'open -a "markdown编辑器绝对路径.app" '</span> + path);</span><br><span class="line">});</span><br><span class="line"><span class="comment">// Hexo 3 用户复制这段</span></span><br><span class="line">hexo.on(<span class="string">'new'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>{</span><br><span class="line">    exec(<span class="string">'open -a "markdown编辑器绝对路径.app" '</span> + data.path);</span><br><span class="line">});</span><br></pre></td></tr></tbody></table></figure></div><ul><li>查看自己的Hexo版本：</li><li>打开终端，并移动到自己博客项目根目录下，执行<code>hexo version</code>即可：</li></ul><a href="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/image-20200218230704820.png" data-fancybox="group" data-caption="image-20200218230704820" class="fancybox"><img alt="image-20200218230704820" style="zoom:50%;" title="image-20200218230704820" data-src="/2020/02/18/%E5%9C%A8Hexo%E6%90%AD%E5%BB%BA%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%B8%AD%E8%88%92%E6%9C%8D%E5%9C%B0%E4%BD%BF%E7%94%A8markdown/image-20200218230704820.png" class="lazyload"></a><ul><li>关于markdown编辑器绝对路径如何找，这里就不细说了，自行百度应该问题不大</li></ul><h2 id="3-保存并退出xxxjs文件之后即可生效"><a class="markdownIt-Anchor" href="#3-保存并退出xxxjs文件之后即可生效"></a> 3. 保存并退出xxx.js文件之后即可生效</h2><h1 id="参考"><a class="markdownIt-Anchor" href="#参考"></a> 参考</h1><blockquote><p><a href="http://etrd.org/2017/01/23/hexo%E4%B8%AD%E5%AE%8C%E7%BE%8E%E6%8F%92%E5%85%A5%E6%9C%AC%E5%9C%B0%E5%9B%BE%E7%89%87/" target="_blank" rel="noopener">hexo中完美插入本地图片</a></p><p><a href="https://notes.doublemine.me/2015-06-29-Hexo%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E6%97%B6%E8%87%AA%E5%8A%A8%E6%89%93%E5%BC%80%E7%BC%96%E8%BE%91%E5%99%A8.html" target="_blank" rel="noopener">添加文章时自动打开编辑器</a></p></blockquote></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客搭建 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hexo+github搭建博客教程</title>
+      <link href="/2020/02/18/Hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/"/>
+      <url>/2020/02/18/Hexo-github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body></body></html>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>关于前端跨域访问后端数据</title>
       <link href="/2020/02/18/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE/"/>
       <url>/2020/02/18/%E5%85%B3%E4%BA%8E%E5%89%8D%E7%AB%AF%E8%B7%A8%E5%9F%9F%E8%AE%BF%E9%97%AE%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE/</url>
