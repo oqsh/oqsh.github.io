@@ -7,8 +7,8 @@ tags:
 categories: 博客搭建
 keywords:
 description:
-top_img:
-cover:
+top_img: /img/Article_top_img/default7.jpg
+cover: /img/Article_top_img/default7.jpg
 mathjax:
 katex:
 hide:

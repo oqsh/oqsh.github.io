@@ -5,8 +5,8 @@ tags: Hexo
 categories: 博客搭建
 keywords:
 description:
-top_img:
-cover:
+top_img: /img/Article_top_img/default10.jpg
+cover: /img/Article_top_img/default10.jpg
 mathjax:
 katex:
 hide:
