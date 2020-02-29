@@ -4589,7 +4589,7 @@ Index.prototype.addObject = function(content, objectID, callback) {
   return this.as._jsonRequest({
     method: objectID !== undefined ?
     'PUT' : // update or create
-    'POST', // create (API generates an objectID)
+    ', // create (API generates an objectID)
     url: '/1/indexes/' + encodeURIComponent(indexObj.indexName) + // create
     (objectID !== undefined ? '/' + encodeURIComponent(objectID) : ''), // update or create
     body: content,
